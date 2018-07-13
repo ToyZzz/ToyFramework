@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DebugModule : MonoBehaviour {
+public enum DebugType
+{
+	IMPORTER
+}
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+public class DebugModule
+{
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
