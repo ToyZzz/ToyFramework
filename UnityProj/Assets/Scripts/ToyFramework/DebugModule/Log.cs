@@ -15,6 +15,11 @@ public class Log
         Debug.Log(msg);
     }
 
+    public static void E(DebugType type, string msg)
+    {
+        E(String.Format("<color=#00ffff>[{0}]</color>{1}", type.ToString(), msg));
+    }
+
     public static void E(string msg)
     {
         Debug.LogError(msg);
