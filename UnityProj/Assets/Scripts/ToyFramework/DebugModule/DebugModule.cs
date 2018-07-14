@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum DebugType
 {
-	IMPORTER
+	IMPORTER,
+    COMMON,
 }
 
 public class DebugModule
