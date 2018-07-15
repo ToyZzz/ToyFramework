@@ -11,8 +11,11 @@ public class DataTableImporter : AssetPostprocessor
 		{
 			Log.D(importAsset);
 		}
-
-		foreach (var moveAsset in moved)
+	    foreach (var deletedAsset in deleted)
+	    {
+	        Log.D(deletedAsset);
+	    }
+        foreach (var moveAsset in moved)
 		{
 			Log.D(string.Format("moved -> {0}", moveAsset));
 		}
@@ -28,4 +31,14 @@ public class DataTableImporter : AssetPostprocessor
 		Log.D(DebugType.IMPORTER,DataTableImporter.DataTableRootFolder);
 		
 	}
+
+    private static void CreateDatatable(string excelFilePath)
+    {
+
+    }
+
+    private static void DeleteDatatable(string excelFilePath)
+    {
+
+    }
 }
