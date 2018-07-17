@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceModule : MonoBehaviour
+public class ResourceModule :MonoSingleton<ResourceModule>
 {
 
 }
