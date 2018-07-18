@@ -9,19 +9,35 @@ public class DataTableImporter : AssetPostprocessor
 	{
 		foreach (var importAsset in imported)
 		{
-			Log.D(importAsset);
+		    if (!importAsset.StartsWith(DataTableRootFolder))
+		    {
+                continue;
+		    }
+		    CreateDatatable(importAsset);
 		}
 	    foreach (var deletedAsset in deleted)
 	    {
-	        Log.D(deletedAsset);
-	    }
+	        if (!deletedAsset.StartsWith(DataTableRootFolder))
+	        {
+	            continue;
+	        }
+	        DeleteDatatable(deletedAsset);
+        }
         foreach (var moveAsset in moved)
-		{
-			Log.D(string.Format("moved -> {0}", moveAsset));
-		}
+        {
+            if (!moveAsset.StartsWith(DataTableRootFolder))
+            {
+                continue;
+            }
+            CreateDatatable(moveAsset);
+        }
 		foreach (var moveFromAsset in movedFromAssetPaths)
 		{
-			Log.D(string.Format("moved From -> {0}", moveFromAsset));
+		    if (!moveFromAsset.StartsWith(DataTableRootFolder))
+		    {
+		        continue;
+		    }
+		    DeleteDatatable(moveFromAsset);
 		}
 	}
 
@@ -34,11 +50,11 @@ public class DataTableImporter : AssetPostprocessor
 
     private static void CreateDatatable(string excelFilePath)
     {
-
+        Log.D("a");
     }
 
     private static void DeleteDatatable(string excelFilePath)
     {
-
+        Log.D("b");
     }
 }
