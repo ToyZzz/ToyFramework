@@ -2,15 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VersionBase : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+public class Version : Singleton<Version>
+{
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
